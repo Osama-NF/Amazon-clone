@@ -3,10 +3,12 @@ import '../styles/Header.css'
 import { Link } from 'react-router-dom'
 import { Search, ShoppingBasket } from '@mui/icons-material'
 import { MyContext } from './MyContext'
+import { signOut } from 'firebase/auth'
+import { auth } from '../firebaseConfig'
 
 function Header() {
 
-    const [basketItems] = useContext(MyContext)
+    const [basketItems, ,user] = useContext(MyContext)
 
     const getBasketLength = () => {
         let total = 0;
@@ -28,13 +30,24 @@ function Header() {
         </div>
 
         <div className='header__nav'>
+
+            {
+                user ?
+                    <Link onClick={() => signOut(auth)} className='header__link'>
+                        <div className='header__option'>
+                            <span className='header__optionLineOne'>Hello,</span>
+                            <span className='header__optionLineTwo'>Log Out</span>
+                        </div>
+                    </Link>
+                :
+                    <Link to='/login' className='header__link'>
+                        <div className='header__option'>
+                            <span className='header__optionLineOne'>Hello,</span>
+                            <span className='header__optionLineTwo'>Sign In</span>
+                        </div>
+                    </Link>
+            }
             
-            <Link to='/login' className='header__link'>
-                <div className='header__option'>
-                    <span className='header__optionLineOne'>Hello,</span>
-                    <span className='header__optionLineTwo'>Sign In</span>
-                </div>
-            </Link>
             
             <Link to='/' className='header__link'>
                 <div className='header__option'> 

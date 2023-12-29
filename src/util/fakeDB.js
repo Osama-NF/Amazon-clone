@@ -6,7 +6,7 @@ const fakeDB = {
         image:"https://m.media-amazon.com/images/I/61aFaZ8vPLL._AC_SX679_.jpg"        
     },
     155: {
-        title:"Anker Soundcore Life Q30 Hybrid Active Noise Cancelling Headphones Bluetooth with Multiple Modes, Hi-Res Sound Bluetooth Headphones, Custom EQ via App, 40H Playtime, Multipoint Connection",
+        title:"Anker Soundcore Life Q30 Hybrid Active Noise Cancelling Headphones Bluetooth with Multiple Modes",
         price:219,
         rating:4.3,
         image:"https://m.media-amazon.com/images/I/61+WYAjltpL._AC_SX522_.jpg"
@@ -18,7 +18,7 @@ const fakeDB = {
         image:"https://m.media-amazon.com/images/I/5131+5QEI8L._AC_SX679_.jpg"
     },
     3434: {
-        title:"Adjustable Photo Backdrop Stand 10ft x 7ft/ 3x2m, Stretch Photo Studio background Support System for Wedding Parties Portrait Photography Background stand with 4 Crossbars, 6 Clamps, 2 Sandbags",
+        title:"Adjustable Photo Backdrop Stand 10ft x 7ft/ 3x2m, Stretch Photo Studio background Support System ",
         price:90,
         rating:2.5,
         image:"https://m.media-amazon.com/images/I/61qr2hmtXZL._AC_SX679_.jpg"
@@ -30,19 +30,19 @@ const fakeDB = {
         image:"https://m.media-amazon.com/images/I/41afbFPWazL._AC_SX522_.jpg"   
     },
     4567: {
-        title:"Songmics 6-Cube Bookcase, Diy Cube Storage Rack, Staircase Organiser In Living Room, Bedroom, Children’S Room, Study, For Toys And Daily Necessities, Room Divider, Black Lsn63H",
+        title:"Songmics 6-Cube Bookcase, Diy Cube Storage Rack, Staircase Organiser In Living Room, Bedroom, Children’S Room, Study",
         price:109,
         rating:4.3,
         image:"https://m.media-amazon.com/images/I/71N9+t9Tg5L._AC_SX679_.jpg"
     },
     274576: {
-        title:"SKY-TOUCH Gaming Chair，Adjustable Computer Chair Pc Office Pu Leather High Back, Ergonomic design Lumbar Support,Comfortable Armrest Headrest，Black",
+        title:"SKY-TOUCH Gaming Chair，Adjustable Computer Chair Pc Office Pu Leather High Back",
         price:349,
         rating:3.7,
         image:"https://m.media-amazon.com/images/I/61AWqcJ2DxL._AC_SX679_.jpg"
     },
     324234234: {
-        title:"Songmics Folding Ottoman, Storage Bench, 80L Capacity, Holds Up To 300 Kg, Synthetic Leather, For Living Room, Bedroom, Entryway, White Lsf106",
+        title:"Songmics Folding Ottoman, Storage Bench, 80L Capacity, Holds Up To 300 Kg",
         price:169,
         rating:4.7,
         image:"https://m.media-amazon.com/images/I/61ccrT6QXZL._AC_SX679_.jpg"

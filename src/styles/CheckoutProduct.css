@@ -17,3 +17,10 @@
     font-size: 17px;
     font-weight: 800;
 }
+
+.checkoutProduct__qnty {
+    padding: 5px 0;
+}
+.checkoutProduct__qnty span {
+    margin: 5px;
+}

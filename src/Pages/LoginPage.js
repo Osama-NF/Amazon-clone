@@ -2,6 +2,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import React from 'react'
 import '../styles/LoginPage.css'
 import {auth} from '../firebaseConfig'
+import {signInWithEmailAndPassword, createUserWithEmailAndPassword} from 'firebase/auth'
 
 function LoginPage() {
   const navigate = useNavigate()
@@ -11,8 +12,7 @@ function LoginPage() {
   const signIn = e => {
     e.preventDefault()
 
-    auth
-    .signInWithEmailAndPassword(email, password)
+    signInWithEmailAndPassword(auth, email, password)
     .then(auth => {
       //redirect to home page
       navigate('/')
@@ -23,8 +23,7 @@ function LoginPage() {
   const register = e => {
     e.preventDefault()
 
-    auth
-    .createUserWithEmailAndPassword(email,password)
+    createUserWithEmailAndPassword(auth, email,password)
     .then(auth => {
       //created user and logged in 
       navigate('/')

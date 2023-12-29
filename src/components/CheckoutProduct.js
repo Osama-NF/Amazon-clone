@@ -6,7 +6,7 @@ import { MyContext } from './MyContext'
 
 function CheckoutProduct({productID, quantity}) {
 
-  const [,setBasketItems] = React.useContext(MyContext)
+  const [basketItems ,setBasketItems] = React.useContext(MyContext)
   const title = fakeDB[productID].title
   const price = fakeDB[productID].price
   const rating = fakeDB[productID].rating
@@ -18,6 +18,13 @@ function CheckoutProduct({productID, quantity}) {
       delete prev[productID]
       return {...prev}
     } )
+  }
+
+  const controlQuantity = command => {
+    if (command === '-') {
+      if (quantity === 1) removeFromBasket()
+      else setBasketItems({...basketItems, [productID]: basketItems[productID] - 1})
+    } else setBasketItems({...basketItems, [productID]: basketItems[productID] + 1})
   }
 
 
@@ -32,7 +39,13 @@ function CheckoutProduct({productID, quantity}) {
           <small>SAR</small>
         </p>
         <StarRating rating={rating}/>
-        <p>should style later and add quantity control in this page --- Quantity: {quantity}</p>
+        <p className='checkoutProduct__qnty' >
+          <span>
+            <button className='amazonBtn' onClick={() => controlQuantity('-')}>-</button>
+            <button className='amazonBtn' onClick={() => controlQuantity('+')}>+</button>
+          </span>
+          Quantity: {quantity}
+        </p>
         <button className='amazonBtn' onClick={removeFromBasket}>Remove from basket</button>
       </div>
     </div>
